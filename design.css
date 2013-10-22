@@ -10,7 +10,7 @@
 * { padding: 0; margin: 0; }
 
 body {
-  font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  font-family: "MS PGothic","Osaka",Arial,sans-serif;
   background-color: __background__;
   color: __text__;
 }
@@ -318,7 +318,7 @@ div.dokuwiki a.mail {
 
 /* existing wikipage */
 div.dokuwiki a.wikilink1 {
-  color: __existing__ !important;
+  color: __existing__;
 }
 
 /* not existing wikipage */
