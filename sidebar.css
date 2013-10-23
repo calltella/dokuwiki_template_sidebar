@@ -11,7 +11,7 @@ div.dokuwiki div.page_with_sidebar {
   text-align: justify;
   width: 75%;
   float: left;
-  border-left: 1px solid __border__;
+  /* border-left: 1px solid __border__; */
 }
 
 /* div.dokuwiki pre {width: 100%;} */
@@ -19,16 +19,16 @@ div.dokuwiki div.page_with_sidebar {
 
 /* ---- Sidebar ---- */
 div.dokuwiki div#sidebar {
-  margin-top: 1em;
+  margin-top: 0em;
   margin-left:  0em;
   margin-right: -1px;
   border-right: 1px solid __border__;
-  padding-top: 0.5em;
+  padding-top: 1.5em;
   padding-bottom: 0.7em;
-  padding-left: 0em;
+  padding-left: 1em;
   float: left;
   background-color: __background_neu__;
-  width: 20%;
+  width: 13%;
   font-size: 80%;
 }
 
