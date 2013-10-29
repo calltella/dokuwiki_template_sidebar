@@ -41,27 +41,30 @@ include(dirname(__FILE__).'/sidebar.php');
 
     <div class="header">
       <div class="logo">
-        <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]"')?>
+        <?php tpl_link(wl(),'<img height="48" width="48" src="'.tpl_basedir().'images/logo.png">','name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]"')?>
+        <?php echo $conf['title'] ?>
       </div>
-      <div class="tagline">
-         <?php echo $conf['tagline']?>
-      </div>
-      <div class="pagename">
-        [[<?php tpl_link(wl($ID,'do=backlink'),tpl_pagetitle($ID,true),'title="'.$lang['btn_backlink'].'"')?>]]
+      <div class="breadcrumbs">
+        <?php tpl_youarehere() ?>
       </div>
       <div class="clearer"></div>
     </div>
 
     <?php /*old includehook*/ @include(dirname(__FILE__).'/header.html')?>
 
+    <!--// use icons  https://www.iconfinder.com/search/?q=iconset%3Acologne#top //-->
     <div class="bar" id="bar__top">
       <div class="bar-left" id="bar__topleft">
-        <?php tpl_button('edit')?>
-        <?php tpl_button('history')?>
+        <?php tpl_actionlink('edit','<img src=',' class="img-icon">',tpl_basedir().'images/1382878283_pencil.png')?>
+        <?php tpl_actionlink('admin','<img src=',' class="img-icon">',tpl_basedir().'images/1382878277_config.png')?>
+        <?php tpl_actionlink('media','<img src=',' class="img-icon">',tpl_basedir().'images/1382878437_photography.png')?>
+        <?php tpl_actionlink('profile','<img src=',' class="img-icon">',tpl_basedir().'images/1382878672_user.png')?>
+        <?php tpl_actionlink('index','<img src=',' class="img-icon">',tpl_basedir().'images/1382878831_sitemap.png')?>
+        <?php tpl_actionlink('login','<img src=',' class="img-icon">',tpl_basedir().'images/1382878884_sign-out.png')?>
       </div>
 
       <div class="bar-right" id="bar__topright">
-        <?php tpl_button('recent')?>
+        <?php tpl_actiondropdown()?>
         <?php tpl_searchform()?>&#160;
       </div>
 
@@ -72,12 +75,6 @@ include(dirname(__FILE__).'/sidebar.php');
     <div class="breadcrumbs">
       <?php tpl_breadcrumbs()?>
       <?php //tpl_youarehere() //(some people prefer this)?>
-    </div>
-    <?php }?>
-
-    <?php if($conf['youarehere']){?>
-    <div class="breadcrumbs">
-      <?php tpl_youarehere() ?>
     </div>
     <?php }?>
 
@@ -116,18 +113,17 @@ include(dirname(__FILE__).'/sidebar.php');
 
     <div class="bar" id="bar__bottom">
       <div class="bar-left" id="bar__bottomleft">
-        <?php tpl_button('edit')?>
-        <?php tpl_button('history')?>
-        <?php tpl_button('revert')?>
+        <?php tpl_actionlink('edit','<img src=',' class="img-icon">',tpl_basedir().'images/1382878283_pencil.png')?>
+        <?php tpl_actionlink('history','<img src=',' class="img-icon">',tpl_basedir().'images/1382942644_old-versions.png')?>
+        <?php tpl_actionlink('revert','<img src=',' class="img-icon">',tpl_basedir().'images/1382942444_refresh.png')?>
       </div>
       <div class="bar-right" id="bar__bottomright">
-        <?php tpl_button('subscribe')?>
-        <?php tpl_button('media')?>
-        <?php tpl_button('admin')?>
-        <?php tpl_button('profile')?>
-        <?php tpl_button('login')?>
-        <?php tpl_button('index')?>
-        <?php tpl_button('top')?>&#160;
+        <?php tpl_actionlink('admin','<img src=',' class="img-icon">',tpl_basedir().'images/1382878277_config.png')?>
+        <?php tpl_actionlink('media','<img src=',' class="img-icon">',tpl_basedir().'images/1382878437_photography.png')?>
+        <?php tpl_actionlink('profile','<img src=',' class="img-icon">',tpl_basedir().'images/1382878672_user.png')?>
+        <?php tpl_actionlink('index','<img src=',' class="img-icon">',tpl_basedir().'images/1382878831_sitemap.png')?>
+        <?php tpl_actionlink('login','<img src=',' class="img-icon">',tpl_basedir().'images/1382878884_sign-out.png')?>
+        <?php tpl_actionlink('top','<img src=',' class="img-icon">',tpl_basedir().'images/1382939787_upcoming-work.png')?>
       </div>
       <div class="clearer"></div>
     </div>

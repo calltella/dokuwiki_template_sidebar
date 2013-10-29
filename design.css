@@ -10,7 +10,7 @@
 * { padding: 0; margin: 0; }
 
 body {
-  font-family: "MS PGothic","Osaka",Arial,sans-serif;
+  font-family: "MS PGothic", Arial, sans-serif;
   background-color: __background__;
   color: __text__;
   font-size: 90%;
@@ -174,8 +174,14 @@ div.dokuwiki .nowrap {
    white-space: nowrap;
 }
 div.dokuwiki div#draft__status {
-  float: right;
+  /* float: right; */
   color: __text_alt__;
+}
+
+div.dokuwiki img.img-icon {
+  width: 24px;
+  height: 24px;
+  padding: 1px 6px 1px 6px;
 }
 
 div.dokuwiki div.license {
@@ -257,7 +263,7 @@ div.dokuwiki form#dw__recent select {
 
 div.dokuwiki a:link,
 div.dokuwiki a:visited {
-  color: __extern__;
+  color: __text__;
   text-decoration: none;
 }
 div.dokuwiki a:hover,
@@ -339,10 +345,11 @@ div.dokuwiki div.preview {
 }
 
 div.dokuwiki div.breadcrumbs {
-  background-color: __background_neu__;
+  /* background-color: __background_neu__; */
   color: __text_neu__;
   font-size: 80%;
-  padding: 0 0 0 4px;
+  padding: 50px 5px 0 5px;
+  float: right;
 }
 
 div.dokuwiki span.user {
