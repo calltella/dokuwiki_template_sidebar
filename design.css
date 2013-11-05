@@ -306,7 +306,7 @@ div.dokuwiki a.interwiki:link {
 div.dokuwiki a.urlextern:visited,
 div.dokuwiki a.windows:visited,
 div.dokuwiki a.interwiki:visited {
-  color: purple;
+  color: __extern__;
 }
 div.dokuwiki a.urlextern:hover,
 div.dokuwiki a.urlextern:active,
